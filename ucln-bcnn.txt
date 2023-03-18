@@ -1,0 +1,31 @@
+package java1;
+import java.util.Scanner;
+public class bai3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.println("nhap a :");
+		int a = scan.nextInt();
+		System.out.println("nhap b :");
+		int b = scan.nextInt();
+		if(a >=0 && b >=0) {
+			if(a == 0 && b == 0) {
+			System.out.println("khong co bcnn,ucln");
+		}else if(a == 0 || b ==0) {
+			System.out.printf("khong co bcnn, ucln = %d",(a == 0) ? a : b);
+		}else {
+			int Tich = a * b;
+			while(b!=0) {
+				int x = b;
+				b = a % b;
+				a = x;
+			}
+			System.out.println("ucln = "+a);
+			System.out.printf("bcnn = %d", Tich/a);
+		}
+	}else {
+		System.out.println("Nhap a, b >=0");
+	}
+	}
+}

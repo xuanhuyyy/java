@@ -1,0 +1,26 @@
+package baitapbuoi2;
+
+import java.util.Scanner;
+
+public class bai2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+        System.out.println("pt bac 1 ");
+        System.out.println("nhap a : ");
+        double a = scan.nextDouble();
+        System.out.println("nhap b : ");
+        double b = scan.nextDouble();
+        double x = -b/a;
+        if (a == 0 && b == 0){
+            System.out.println("pt co vo so nghiem ");
+        } else if (a == 0 && b != 0) {
+            System.out.println("pt vo nghiem");
+        } else
+        {
+            System.out.println("pt co nghiem x = " + x);
+        }
+	}
+
+}

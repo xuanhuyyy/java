@@ -1,0 +1,32 @@
+package baitapbuoi2;
+
+import java.util.Scanner;
+
+public class Bai22 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+        System.out.print("Nhap a : ");
+        double a = scan.nextDouble();
+        System.out.print("Nhap b : ");
+        double b = scan.nextDouble();
+        System.out.print("Nhap c : ");
+        double c = scan.nextDouble();
+        double delta = b*b - 4*a*c;
+        if (delta > 0)
+        {
+            double x1 = (-b + Math.sqrt(delta)/(2*a));
+            System.out.println(x1);
+            double x2 = (-b + Math.sqrt(delta)/(2*a));
+            System.out.println(x2);
+        } else if (delta == 0) {
+            double nk = -b/2*a;
+            System.out.println("co nghiem kep : "+nk);
+        } else
+        {
+            System.out.println("vo nghiem ");
+        }
+	}
+
+}

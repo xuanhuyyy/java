@@ -1,0 +1,101 @@
+package baitapbuoi2;
+
+import java.util.Scanner;
+
+public class bai4 {
+
+	public static void main(String[] args) {
+		// in ra danh sach bai tap
+		System.out.println("_____________________");
+		System.out.println("Danh sach bai tap");
+		System.out.println("1.Bai 1: Xet hoc luc");
+		System.out.println("2.Bai 2: Giai phuong trinh");
+		System.out.println("	2.1 Phuong trinh bac 1");
+		System.out.println("	2.2 Phuong trinh bac 2");
+		System.out.println("3.Bai 3: Tinh tien dien");
+		System.out.println("____________________");
+		System.out.print("Nhap bai tap: ");
+		//chon bai tap
+		Scanner scan = new Scanner(System.in);
+		int bt = scan.nextInt();
+		switch (bt) {
+		case 1: {
+			System.out.print("Nhap diem sinh vien: ");
+			Float a = scan.nextFloat();
+			if(a >= 9) System.out.print("Hoc sinh xuat sac");
+			else if (a >= 8 ) System.out.print("Hoc sinh gioi");
+			else if (a >= 6 ) System.out.print("Hoc sinh kha");
+			else if (a >= 5 ) System.out.print("Hoc sinh trung binh");
+			else if (a >= 3.5 )  System.out.print("Hoc sinh yeu");
+			else System.out.print("Hoc sinh kem");
+			} break;
+		case 2: {
+			System.out.print("Nhap bac phuong trinh :");
+			int p = scan.nextInt();
+			if(p == 1) {
+			// nhap lan luot cac so a b
+			System.out.print("Phuong trinh bac 1 co dang ax + b=0\nNhap so a: ");
+			float a =scan.nextFloat();
+			System.out.print("Nhap so b: ");
+			float b =scan.nextFloat();	
+			//giai pt bac 1
+			if(a == 0) {
+				if(b == 0) System.out.print("Vo so nghiem");
+				else System.out.print("Vo nghiem");
+					}
+			else {
+				float x = -b/a;
+				System.out.printf("x= %.2f", x);			
+					}
+				}
+			else {
+				System.out.print("Phuong trinh bac 2 co dang ax^2 + bx + c = 0\nNhap a: ");
+				float a = scan.nextFloat();
+				System.out.print("Nhap b: ");
+				float b = scan.nextFloat();
+				System.out.print("Nhap c: ");
+				float c = scan.nextFloat();
+				if(a == 0) { //giai pt bac 1
+					if(b == 0) {
+						if(c == 0) System.out.print("Vo so nghiem");
+						else System.out.print("Vo nghiem");
+						}
+					else {
+						float x = -c/b;
+						System.out.printf("x= %.2f",x);
+						}
+					}
+				else { //giai pt bac 2
+					float delta = b*b - 4*a*c; //tinh va xet dieu kien delta
+					if (delta <= 0) System.out.print("Phuong trinh vo nghiem");
+					else if (delta == 0) {
+						float x = -b/(2*a);
+						System.out.printf("x= %.2f",x);
+						}
+					else {
+						float x1 = (float)(-b + Math.sqrt(delta))/(2*a);
+						float x2 = (float)(-b - Math.sqrt(delta))/(2*a);
+						System.out.printf("x1= %.2f \n", x1);
+						System.out.printf("x2= %.2f", x2);
+						}
+					
+					}
+				}
+			}break;
+		case 3: {
+			//nhap so dien su dung
+			System.out.print("Nhap so dien tieu thu cua thang: ");	
+			int sd =scan.nextInt();
+			scan.close();
+			//voi moi muc dien tieu thu khac nhau se ung voi so tien phai tra khac nhau
+			if(sd <= 50) System.out.printf("So tien phai tra la: %d dong", 1678*sd);
+			else if(sd <= 100) System.out.printf("So tien can dong la: %d dong", 1734*sd);
+			else if(sd <= 200) System.out.printf("So tien can dong la: %d dong", 2014*sd);
+			else if(sd <= 300) System.out.printf("So tien can dong la: %d dong", 2536*sd);
+			else if(sd <= 400) System.out.printf("So tien can dong la: %d dong", 2834*sd);
+			else System.out.printf("So tien phai tra la: %d dong", 2927*sd);
+			
+			}
+		}	
+	}
+}

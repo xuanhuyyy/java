@@ -1,0 +1,27 @@
+package baitapbuoi2;
+
+import java.util.Scanner;
+
+public class bai1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		System.out.printf("Nhap diem vao cua sinh vien(1-10): " );
+		float a = scan.nextFloat();
+		if (a >=9) {
+			System.out.println("Hoc luc xuat sac" );
+		}else if (a >=8 && a <9){
+			System.out.println("Hoc luc gioi" );
+		}else if (a >=6.5 && a <8){
+			System.out.println("Hoc luc kha" );
+		}else if (a >=5 && a <6.5){
+			System.out.println("Hoc luc trung binh" );
+		}else if (a >=3.5 && a <5){
+			System.out.println("Hoc luc yeu" );
+		}else {
+			System.out.println("Hoc luc kem" );
+		}
+	}
+
+}
